@@ -3,10 +3,22 @@
 <head>
 	<meta charset="utf-8">
 	<title>study vue.js</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 </head>
 <body>
-	<div id="app" v-bind:title="message2">{{"hello"+" world \n"+message}}</div>
+	<div id="app" v-bind:title="message2" class="row container">{{"hello"+" world \n"+message}}</div><!-- 
+	<div id="v-control"><br>
+		<button v-on:click="doSome">{{message}</button>
+	</div> -->
+	<div id="forControl" class="row container"> <ol>
+		<li v-for="todo in todos" class="">{{todo.text}} </li>
+	</ol></div>
+
+	<div id="app-5">
+  		<p>{{text}}</p>
+  		<button v-on:click="doSome">Message retourné</button>
+	</div>
 </body>
-<script type="text/javascript" src="scripts/vue.js"></script>
-<script type="text/javascript" src="scripts/script.js"></script>
+<script type="text/javascript" src="assets/js/vue.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
 </html>
