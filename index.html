@@ -8,7 +8,9 @@
 <body>
 	<div id="app" v-bind:title="message2" class="row container">{{"hello"+" world \n"+message}}</div>
 	<div id="v-control"><br>
-		<button v-on:click="doSome">{{message}</button>
+		<p>{{message}}</p>
+		<p>{{control}}</p>
+		<input type="text" name="" v-model="control">
 	</div> 
 	<div id="forControl" class="row container"> <ol>
 		<li v-for="todo in todos" class="">{{todo.text}} </li>
@@ -18,6 +20,17 @@
   		<p>{{text}}</p>
   		<button v-on:click="doSome">Message retourné</button>
 	</div>
+
+	<div id="component">
+		<h3>{{title}}</h3>
+		<ol>
+			<todo-item
+				v-for="item in taskList"
+				v-bind:todo="item"
+				v-bind:key="item.id" ></todo-item>
+		</ol>
+	</div>
+
 </body>
 <script type="text/javascript" src="assets/js/vue.js"></script>
 <script type="text/javascript" src="assets/js/script.js"></script>
