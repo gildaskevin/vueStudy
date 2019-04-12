@@ -1,8 +1,7 @@
 new Vue({el: '#app', data: {message: "ma premiere vue", message2:"Nous sommes à la date"+new Date().toLocaleString()}});
 new Vue({
 	el: "#app-5", 
-	data:{
-		seen:true, 
+	data:{ 
 		message:"10", 
 		text:"mon texte à traiter pour Juliette"
 	}, 
